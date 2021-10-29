@@ -36,7 +36,7 @@ function App() {
             <PrivateRoute path="/addplans">
               <AddPlans />
             </PrivateRoute>
-            <PrivateRoute path="/placebooking">
+            <PrivateRoute path="/placebooking/:id">
               <PlaceBooking />
             </PrivateRoute>
           </Switch>

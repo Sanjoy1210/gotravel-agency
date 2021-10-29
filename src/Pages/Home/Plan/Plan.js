@@ -3,7 +3,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Plan = ({ plan }) => {
-  const { planTitle, description, imageUrl } = plan;
+  const { planTitle, description, imageUrl, _id } = plan;
 
   return (
     <Col sm={12} md={4} lg={3}>
@@ -15,7 +15,7 @@ const Plan = ({ plan }) => {
             <Card.Text>
               {description.slice(0, 50)}
             </Card.Text>
-            <Button as={Link} to="/placebooking" variant="warning">Book now</Button>{' '}
+            <Button as={Link} to={`/placebooking/${_id}`} variant="warning">Book now</Button>{' '}
           </Card.Body>
         </Card>
       </div>
