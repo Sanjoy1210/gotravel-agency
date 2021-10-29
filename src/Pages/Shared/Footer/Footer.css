@@ -1,0 +1,8 @@
+.footer-wrapper {
+  background-image: url(../../../images/footer/footer-bg.png);
+  min-height: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 430px;
+}

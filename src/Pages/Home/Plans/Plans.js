@@ -1,0 +1,42 @@
+import axios from 'axios';
+import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import Plan from '../Plan/Plan';
+
+const Plans = () => {
+
+  const [plans, setPlans] = useState([]);
+
+  useEffect(() => {
+    const loadPlans = async () => {
+      const result = await axios('http://localhost:5000/plans');
+      setPlans(result.data);
+      console.log(result);
+    }
+
+    loadPlans().catch(console.dir);
+  }, []);
+
+  return (
+    <div className="plans-section my-5">
+      <div className="plans-wrapper">
+        <Container>
+          <div className="plans-title text-center pb-4">
+            <h2>Planning Your Holiday</h2>
+          </div>
+          <div className="plans">
+            <Row>
+              {
+                plans.map(plan => <Plan key={plan._id} plan={plan}></Plan>)
+              }
+            </Row>
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
+};
+
+export default Plans;

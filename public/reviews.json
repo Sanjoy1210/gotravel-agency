@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Kevin Martin",
+    "imageUrl": "https://i.ibb.co/dJh1PJ6/client-1.jpg",
+    "review": "Food is for eating, and good food is to be enjoyed... I think food is, actually, very beautiful in itself.",
+    "ratings": 3.5,
+    "role": "customer"
+  },
+  {
+    "name": "Shirley Smith",
+    "imageUrl": "https://i.ibb.co/DYRQStp/client-3.jpg",
+    "review": "It's easy to impress me. Just good friends, good food, and good laughs. I'm happy. I'm satisfied. I'm content.",
+    "ratings": 4.5,
+    "role": "customer"
+  },
+  {
+    "name": "Jessica Brown",
+    "imageUrl": "https://i.ibb.co/XxZHZv6/client-4.jpg",
+    "review": "Instead of going out to dinner, buy good food. In a bad economy, it's more important to make yourself feel good.",
+    "ratings": 5.0,
+    "role": "customer"
+  },
+  {
+    "name": "Asad Xiong",
+    "imageUrl": "https://i.ibb.co/bgrx24x/client-2.jpg",
+    "review": "If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.",
+    "ratings": 4.3,
+    "role": "customer"
+  }
+]

@@ -1,0 +1,26 @@
+import React from 'react';
+import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+const Plan = ({ plan }) => {
+  const { planTitle, description, imageUrl } = plan;
+
+  return (
+    <Col sm={12} md={4} lg={3}>
+      <div className="plan">
+        <Card>
+          <Card.Img variant="top" src={imageUrl} />
+          <Card.Body>
+            <Card.Title>{planTitle}</Card.Title>
+            <Card.Text>
+              {description.slice(0, 50)}
+            </Card.Text>
+            <Button as={Link} to="/placebooking" variant="warning">Book now</Button>{' '}
+          </Card.Body>
+        </Card>
+      </div>
+    </Col>
+  );
+};
+
+export default Plan;

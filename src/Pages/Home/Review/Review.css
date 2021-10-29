@@ -1,0 +1,15 @@
+.review .card-img-top {
+  display: block;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+  transition: all 500ms ease;
+  overflow: hidden;
+}
+.review:hover .card-img-top {
+  transform: scale(1.2);
+}
