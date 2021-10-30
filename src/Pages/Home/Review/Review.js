@@ -10,7 +10,9 @@ const Review = ({ singleReview }) => {
     <Col sm={12} md={4} lg={3}>
       <div className="review">
         <Card>
-          <Card.Img variant="top" src={imageUrl} />
+          <div>
+            <Card.Img variant="top" src={imageUrl} />
+          </div>
           <Card.Body>
             <Card.Text>
               {ratings}

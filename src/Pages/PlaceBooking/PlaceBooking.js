@@ -11,10 +11,15 @@ const PlaceBooking = () => {
   const { user } = useAuth();
   const { id } = useParams();
   const [plan, setPlan] = useState({});
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   useEffect(() => {
+    // fetch(`http://localhost:5000/plan/${id}`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     setPlan(data);
+    //   })
+
     const loadSinglePlan = async () => {
       const result = await axios(`http://localhost:5000/plan/${id}`);
       setPlan(result.data);
@@ -22,7 +27,20 @@ const PlaceBooking = () => {
     }
 
     loadSinglePlan().catch(console.dir);
-  }, [])
+  }, []);
+
+  console.log(plan);
+
+  const onSubmit = async (data) => {
+    data.status = 'pending';
+    // data.planTitle = { plan.planTitle };
+    console.log(data);
+    const result = await axios.post('http://localhost:5000/booking', data);
+    if (result.data.insertedId) {
+      alert('Booking successfully');
+      reset();
+    }
+  }
 
   return (
     <div className="place-booking">
@@ -50,7 +68,7 @@ const PlaceBooking = () => {
                   <input placeholder="Enter your address" {...register("address")} />
                   <input placeholder="Enter your phone number" {...register("phone")} />
                   <input type="date" {...register("date")} />
-                  <input defaultValue={plan?.planTitle} {...register("planTitle")} />
+                  <input defaultValue={plan.planTitle} {...register("planTitle")} />
                   {/* errors will return when field validation fails  */}
                   {errors.exampleRequired && <span>This field is required</span>}
 

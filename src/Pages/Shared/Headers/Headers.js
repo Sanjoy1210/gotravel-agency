@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './Headers.css';
 
 const Headers = () => {
   const { user, logOut } = useAuth();
@@ -13,7 +14,7 @@ const Headers = () => {
           <Navbar.Brand as={Link} to="/home">GoTravel</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto align-items-center">
               <Nav.Link as={Link} to="/home">Home</Nav.Link>
               <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link>
               <Nav.Link as={Link} to="/manageallbookings">Manage All Bookings</Nav.Link>
@@ -23,7 +24,7 @@ const Headers = () => {
                   <Button as={Link} to="/login" variant="primary">Log in</Button> :
                   <>
                     <span>{user.displayName}</span>
-                    <img src={user.photoURL} alt="" style={{ width: "50px", height: "50px" }} />
+                    <span className="profile-pic"><img src={user.photoURL} alt="" style={{ width: "50px", height: "50px" }} /></span>
                     <Button onClick={logOut} variant="warning">Log out</Button>
                   </>
               }

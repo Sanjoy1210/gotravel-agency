@@ -8,8 +8,8 @@
   width: 230px;
   object-fit: cover;
   transition: all 500ms ease;
-  overflow: hidden;
 }
-.review:hover .card-img-top {
+.review .card-img-top:hover {
+  overflow: hidden;
   transform: scale(1.2);
 }
