@@ -81,13 +81,19 @@ const PlaceBooking = () => {
                 <div className="photos">
                   <Row>
                     <Col sm={12} md={6} lg={3}>
-                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      <div className="photo">
+                        <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      </div>
                     </Col>
                     <Col sm={12} md={6} lg={3}>
-                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      <div className="photo">
+                        <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      </div>
                     </Col>
                     <Col sm={12} md={6} lg={3}>
-                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      <div className="photo">
+                        <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                      </div>
                     </Col>
                   </Row>
                 </div>

@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.user-booking img {
+  width: 100px;
+}
+
 .user-booking p {
   margin-bottom: 0;
 }
@@ -26,6 +30,16 @@
 
 @media only screen and (max-width: 668px) {
   .user-booking {
-    display: block;
+    flex-direction: column;
+  }
+  .user-booking img {
+    width: 100%;
+  }
+  .user-booking p {
+    margin: 10px 0;
+  }
+
+  .user-booking span p {
+    margin: 0;
   }
 }

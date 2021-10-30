@@ -47,7 +47,7 @@ const ManageAllBookings = () => {
 
 
   return (
-    <div>
+    <div className="my-5">
       <Container>
         <Row>
           <Col sm={12} md={6} lg={4}>
@@ -70,7 +70,7 @@ const ManageAllBookings = () => {
           </Col>
         </Row>
 
-        <Row>
+        <div className="my-5">
           {
             bookings.map(booking => <AllBooking
               key={booking._id}
@@ -79,7 +79,7 @@ const ManageAllBookings = () => {
               updateBookingStatus={updateBookingStatus}
             ></AllBooking>)
           }
-        </Row>
+        </div>
       </Container>
     </div>
   );
