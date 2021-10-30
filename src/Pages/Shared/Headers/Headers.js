@@ -16,13 +16,14 @@ const Headers = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto align-items-center">
               <Nav.Link as={Link} to="/home">Home</Nav.Link>
-              <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link>
-              <Nav.Link as={Link} to="/manageallbookings">Manage All Bookings</Nav.Link>
-              <Nav.Link as={Link} to="/addplans">Add A New Plan</Nav.Link>
+
               {
                 !user.email ?
                   <Button as={Link} to="/login" variant="primary">Log in</Button> :
                   <>
+                    <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link>
+                    <Nav.Link as={Link} to="/manageallbookings">Manage All Bookings</Nav.Link>
+                    <Nav.Link as={Link} to="/addplans">Add A New Plan</Nav.Link>
                     <span>{user.displayName}</span>
                     <span className="profile-pic"><img src={user.photoURL} alt="" style={{ width: "50px", height: "50px" }} /></span>
                     <Button onClick={logOut} variant="warning">Log out</Button>

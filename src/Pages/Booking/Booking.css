@@ -1,0 +1,31 @@
+.user-booking {
+  box-shadow: 0px 3px 10px #21252947;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-booking p {
+  margin-bottom: 0;
+}
+
+.pending {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.approved {
+  background-color: limegreen;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 668px) {
+  .user-booking {
+    display: block;
+  }
+}

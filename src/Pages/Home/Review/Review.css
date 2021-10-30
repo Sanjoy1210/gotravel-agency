@@ -1,15 +1,20 @@
+.card {
+  border: none!important;
+}
+
 .review .card-img-top {
   display: block;
   text-align: center;
   margin: auto;
-  position: relative;
+  padding: 10px;
+  /* position: relative; */
   border-radius: 50%;
   height: 230px;
   width: 230px;
   object-fit: cover;
   transition: all 500ms ease;
-}
-.review .card-img-top:hover {
   overflow: hidden;
-  transform: scale(1.2);
+}
+.review:hover .card-img-top {
+  transform: scale(0.90);
 }

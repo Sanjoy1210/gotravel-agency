@@ -21,7 +21,7 @@ const Reviews = () => {
     <div className="review-section">
       <div className="review-wrapper">
         <Container>
-          <div className="review-title">
+          <div className="review-title text-center my-5">
             <h2>What They’re Saying</h2>
           </div>
           <div className="reviews">

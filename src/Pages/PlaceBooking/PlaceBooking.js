@@ -14,12 +14,6 @@ const PlaceBooking = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   useEffect(() => {
-    // fetch(`http://localhost:5000/plan/${id}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     setPlan(data);
-    //   })
-
     const loadSinglePlan = async () => {
       const result = await axios(`http://localhost:5000/plan/${id}`);
       setPlan(result.data);
@@ -33,6 +27,7 @@ const PlaceBooking = () => {
 
   const onSubmit = async (data) => {
     data.status = 'pending';
+    data.imageUrl = plan.imageUrl;
     // data.planTitle = { plan.planTitle };
     console.log(data);
     const result = await axios.post('http://localhost:5000/booking', data);
@@ -43,19 +38,21 @@ const PlaceBooking = () => {
   }
 
   return (
-    <div className="place-booking">
+    <div className="place-booking my-5">
       <div className="place-booking-wrapper">
         <Container>
           <Row>
             <Col sm={12} lg={9}>
-              <div>
+              <div className="mb-4">
                 <h2>{plan.planTitle}</h2>
               </div>
-              <p>{plan?.description}</p>
+              <div>
+                <p>{plan?.description}</p>
+              </div>
             </Col>
             <Col sm={12} lg={3}>
               <div className="place-booking-form">
-                <div className="title">
+                <div className="title mb-4">
                   <h2>Book this tour</h2>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -77,12 +74,22 @@ const PlaceBooking = () => {
               </div>
             </Col>
             <Col>
-              <div className="photo-gellary">
-                <div>
+              <div className="photo-gellary mt-4">
+                <div className="mb-4">
                   <h2>From Gellary</h2>
                 </div>
-                <div>
-                  <img src={plan?.imageUrl} alt="" />
+                <div className="photos">
+                  <Row>
+                    <Col sm={12} md={6} lg={3}>
+                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                    </Col>
+                    <Col sm={12} md={6} lg={3}>
+                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                    </Col>
+                    <Col sm={12} md={6} lg={3}>
+                      <img src={plan?.imageUrl} alt="" style={{ width: '100%' }} />
+                    </Col>
+                  </Row>
                 </div>
               </div>
             </Col>

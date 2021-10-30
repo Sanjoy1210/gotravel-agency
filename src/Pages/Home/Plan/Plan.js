@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Plan.css';
 
 const Plan = ({ plan }) => {
   const { planTitle, description, imageUrl, _id } = plan;
@@ -9,7 +10,9 @@ const Plan = ({ plan }) => {
     <Col sm={12} md={4} lg={3}>
       <div className="plan">
         <Card>
-          <Card.Img variant="top" src={imageUrl} />
+          <div className="plan-thumbnail">
+            <Card.Img variant="top" src={imageUrl} />
+          </div>
           <Card.Body>
             <Card.Title>{planTitle}</Card.Title>
             <Card.Text>

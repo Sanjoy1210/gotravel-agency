@@ -1,0 +1,22 @@
+.card {
+  box-shadow: 0px 3px 10px #21252947;
+  padding: 10px 10px 0;
+}
+
+.plan-thumbnail {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  /* border-top-left-radius: 8px;
+  border-top-right-radius: 8px; */
+  overflow: hidden;
+}
+
+.plan-thumbnail .card-img-top {
+  transition: transform 500ms ease, opacity 500ms ease, -webkit-transform 500ms ease;
+}
+
+.card:hover .card-img-top {
+  opacity: 1;
+  transform: scale(1.05);
+}

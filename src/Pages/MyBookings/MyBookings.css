@@ -1,0 +1,26 @@
+.user-profile {
+  width: 65%;
+  box-shadow: 0px 3px 10px #21252947;
+  border-radius: 20px;
+  padding: 15px;
+  /* display: flex;
+  align-items: center; */
+  margin-left: 3px;
+  margin-bottom: 50px;
+}
+
+.user-profile img {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.user-details p {
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 991px) {
+  .user-profile {
+    width: 100%;
+    margin-left: 2px;
+  }
+}

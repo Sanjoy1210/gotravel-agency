@@ -5,6 +5,9 @@ import AllBooking from '../AllBooking/AllBooking';
 
 const ManageAllBookings = () => {
   const [bookings, setBookings] = useState([]);
+  const [isUpdate, setIsUpdate] = useState(false);
+  const [pending, setPending] = useState(bookings.length);
+  const [approved, setApproved] = useState(0);
 
   useEffect(() => {
     const loadAllBooking = async () => {
@@ -13,23 +16,34 @@ const ManageAllBookings = () => {
     }
 
     loadAllBooking().catch(console.dir);
-  }, [])
+  }, [isUpdate])
 
   const handleRemoveBooking = async (id) => {
-    const result = await axios.delete(`http://localhost:5000/allbooking/${id}`);
-    if (result.data.deletedCount) {
-      alert('deleted successfully')
+    const processed = window.confirm('are u sure u want to delete?');
+    if (processed) {
+      const result = await axios.delete(`http://localhost:5000/allbooking/${id}`);
+      if (result.data.deletedCount) {
+        alert('deleted successfully');
+      }
+      const newBooking = bookings.filter(booking => booking._id !== id);
+      setBookings(newBooking);
     }
-    const newBooking = bookings.filter(booking => booking._id !== id);
-    setBookings(newBooking);
   }
 
   const updateBookingStatus = async (id) => {
     const updateBooking = bookings.find(booking => booking._id == id);
     updateBooking.status = 'approved';
     const result = await axios.put(`http://localhost:5000/booking/${id}`, updateBooking);
-    console.log(result);
+    if (result.data.modifiedCount) {
+      setPending(pending - 1);
+      setApproved(approved + 1);
+      setIsUpdate(true);
+    }
   }
+
+  // if (approved == 0) {
+  //   setPending(bookings.length);
+  // }
 
 
   return (
@@ -44,14 +58,14 @@ const ManageAllBookings = () => {
           </Col>
           <Col sm={12} md={6} lg={4}>
             <div className="booking-plan bg-success p-4 text-center">
-              <h3>Total Plan</h3>
-              <h1>{bookings.length}</h1>
+              <h3>Pending Booking</h3>
+              <h1>{pending}</h1>
             </div>
           </Col>
           <Col sm={12} md={6} lg={4}>
             <div className="upcoming-plan bg-danger p-4 text-center">
-              <h3>Total Plan</h3>
-              <h1>{bookings.length}</h1>
+              <h3>Approved Booking</h3>
+              <h1>{approved}</h1>
             </div>
           </Col>
         </Row>
