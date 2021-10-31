@@ -1,0 +1,22 @@
+.hotel-thumbnail {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hotel-thumbnail .card-img-top {
+  height: 240px;
+  object-fit: cover;
+  transition: transform 500ms ease, opacity 500ms ease, -webkit-transform 500ms ease;
+}
+
+.hotel-description {
+  padding: 1rem .5rem!important;
+}
+
+@media only screen and (max-width: 991px) {
+  .hotel {
+    margin-bottom: 20px;
+  }
+}

@@ -7,7 +7,7 @@ const Plan = ({ plan }) => {
   const { planTitle, description, imageUrl, _id } = plan;
 
   return (
-    <Col sm={12} md={4} lg={3}>
+    <Col sm={12} md={6} lg={3}>
       <div className="plan">
         <Card>
           <div className="plan-thumbnail">
