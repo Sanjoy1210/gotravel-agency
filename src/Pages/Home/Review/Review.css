@@ -18,3 +18,13 @@
 .review:hover .card-img-top {
   transform: scale(0.90);
 }
+
+.review p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 991px) {
+  .review {
+    margin-bottom: 20px;
+  }
+}

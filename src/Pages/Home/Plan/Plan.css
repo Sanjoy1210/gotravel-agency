@@ -18,3 +18,9 @@
   opacity: 1;
   transform: scale(1.05);
 }
+
+@media only screen and (max-width: 991px) {
+  .plan {
+    margin-bottom: 20px
+  }
+}

@@ -7,7 +7,7 @@ const Review = ({ singleReview }) => {
   const { review, imageUrl, name, ratings } = singleReview;
 
   return (
-    <Col sm={12} md={4} lg={3}>
+    <Col sm={12} md={6} lg={3}>
       <div className="review">
         <Card>
           <div>
