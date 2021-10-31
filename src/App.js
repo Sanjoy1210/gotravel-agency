@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ManageAllBookings from './Pages/ManageAllBookings/ManageAllBookings';
 import MyBookings from './Pages/MyBookings/MyBookings';
+import NotFound from './Pages/NotFound/NotFound';
 import PlaceBooking from './Pages/PlaceBooking/PlaceBooking';
 import Footer from './Pages/Shared/Footer/Footer';
 import Headers from './Pages/Shared/Headers/Headers';
@@ -39,6 +40,9 @@ function App() {
             <PrivateRoute path="/placebooking/:id">
               <PlaceBooking />
             </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
           <Footer />
         </Router>

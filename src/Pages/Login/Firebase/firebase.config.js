@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAFPNV2ttDoQQ--EQLhlttuwGHBi3TrJMo",
-  authDomain: "gotravel-agency.firebaseapp.com",
-  projectId: "gotravel-agency",
-  storageBucket: "gotravel-agency.appspot.com",
-  messagingSenderId: "1073767018034",
-  appId: "1:1073767018034:web:6e694045305e913289962b"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.envREACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 export default firebaseConfig;
