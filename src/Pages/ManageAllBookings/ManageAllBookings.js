@@ -52,23 +52,23 @@ const ManageAllBookings = () => {
   return (
     <div className="my-5">
       <Container>
-        <Row>
+        <Row className="white-text">
           <Col sm={12} md={6} lg={4}>
             <div className="total-plan bg-warning p-4 text-center">
-              <h3>Total Booking Plan</h3>
-              <h1>{bookings.length}</h1>
+              <h3 className="text-white">Total Booking Plan</h3>
+              <h1 className="text-white">{bookings.length}</h1>
             </div>
           </Col>
           <Col sm={12} md={6} lg={4}>
             <div className="booking-plan bg-success p-4 text-center">
-              <h3>Pending Booking</h3>
-              <h1>{pending}</h1>
+              <h3 className="text-white">Pending Booking</h3>
+              <h1 className="text-white">{pending}</h1>
             </div>
           </Col>
           <Col sm={12} md={6} lg={4}>
             <div className="upcoming-plan bg-danger p-4 text-center">
-              <h3>Approved Booking</h3>
-              <h1>{bookings.length - pending}</h1>
+              <h3 className="text-white">Approved Booking</h3>
+              <h1 className="text-white">{bookings.length - pending}</h1>
             </div>
           </Col>
         </Row>
