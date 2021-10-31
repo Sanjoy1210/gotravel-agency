@@ -9,7 +9,7 @@ const Hotels = () => {
 
   useEffect(() => {
     const loadHotels = async () => {
-      const result = await axios('http://localhost:5000/hotels');
+      const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/hotels');
       setHotels(result.data);
     }
 
