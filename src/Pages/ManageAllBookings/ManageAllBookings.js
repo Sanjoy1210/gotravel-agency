@@ -6,7 +6,7 @@ import AllBooking from '../AllBooking/AllBooking';
 const ManageAllBookings = () => {
   const [bookings, setBookings] = useState([]);
   const [isUpdate, setIsUpdate] = useState(false);
-  const [pending, setPending] = useState(bookings.length);
+  const [pending, setPending] = useState(0);
   const [approved, setApproved] = useState(0);
 
   useEffect(() => {
@@ -17,6 +17,13 @@ const ManageAllBookings = () => {
 
     loadAllBooking().catch(console.dir);
   }, [isUpdate])
+
+  useEffect(() => {
+    if (bookings.length) {
+      const a = bookings.filter(booking => booking.status == 'pending');
+      setPending(a.length);
+    }
+  }, [bookings])
 
   const handleRemoveBooking = async (id) => {
     const processed = window.confirm('are u sure u want to delete?');
@@ -32,19 +39,15 @@ const ManageAllBookings = () => {
 
   const updateBookingStatus = async (id) => {
     const updateBooking = bookings.find(booking => booking._id == id);
+
     updateBooking.status = 'approved';
     const result = await axios.put(`https://mysterious-scrubland-36243.herokuapp.com/booking/${id}`, updateBooking);
+
     if (result.data.modifiedCount) {
-      setPending(pending - 1);
       setApproved(approved + 1);
       setIsUpdate(true);
     }
   }
-
-  // if (approved == 0) {
-  //   setPending(bookings.length);
-  // }
-
 
   return (
     <div className="my-5">
@@ -52,7 +55,7 @@ const ManageAllBookings = () => {
         <Row>
           <Col sm={12} md={6} lg={4}>
             <div className="total-plan bg-warning p-4 text-center">
-              <h3>Total Plan</h3>
+              <h3>Total Booking Plan</h3>
               <h1>{bookings.length}</h1>
             </div>
           </Col>
@@ -65,7 +68,7 @@ const ManageAllBookings = () => {
           <Col sm={12} md={6} lg={4}>
             <div className="upcoming-plan bg-danger p-4 text-center">
               <h3>Approved Booking</h3>
-              <h1>{approved}</h1>
+              <h1>{bookings.length - pending}</h1>
             </div>
           </Col>
         </Row>

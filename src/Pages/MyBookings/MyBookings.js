@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button, Col, Container, Row, Table } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import Booking from '../Booking/Booking';
 import './MyBookings.css';
@@ -14,15 +14,12 @@ const MyBookings = () => {
   useEffect(() => {
     const loadBooking = async () => {
       const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/allbooking');
-      console.log(result.data);
       if (result.data) {
         const userBookings = result.data.filter(book => book.email == user.email);
-        console.log(userBookings);
         setBookings(userBookings);
       }
     }
 
-    console.log(bookings);
     loadBooking().catch(console.dir);
   }, [])
 

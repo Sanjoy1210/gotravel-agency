@@ -13,7 +13,6 @@ const Plans = () => {
     const loadPlans = async () => {
       const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/plans');
       setPlans(result.data);
-      console.log(result);
     }
 
     loadPlans().catch(console.dir);

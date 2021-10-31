@@ -17,19 +17,15 @@ const PlaceBooking = () => {
     const loadSinglePlan = async () => {
       const result = await axios(`https://mysterious-scrubland-36243.herokuapp.com/plan/${id}`);
       setPlan(result.data);
-      console.log(result.data);
     }
 
     loadSinglePlan().catch(console.dir);
   }, []);
 
-  console.log(plan);
-
   const onSubmit = async (data) => {
     data.status = 'pending';
     data.imageUrl = plan.imageUrl;
     // data.planTitle = { plan.planTitle };
-    console.log(data);
     const result = await axios.post('https://mysterious-scrubland-36243.herokuapp.com/booking', data);
     if (result.data.insertedId) {
       alert('Booking successfully');
