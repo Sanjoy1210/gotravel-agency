@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Col, Container, Form, ListGroup, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import logo from '../../../images/logo/loader.png';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <Container>
           <Row>
             <Col xs={12} md={6} lg={3}>
-              <h1>GoTravel</h1>
+              <h2><img src={logo} alt="" style={{ width: "50px" }} /> GoTravel</h2>
               <div className="contacts-info">
                 <p>Life is a journey that must be traveled no matter how bad the roads and accommodations.</p>
                 <p><i className="far fa-envelope"></i> hello@gotravel.com</p>
@@ -21,6 +22,7 @@ const Footer = () => {
             <Col xs={12} md={6} lg={3}>
               <div className="quick-links">
                 <h2>Quick Links</h2>
+                <hr />
                 <div className="links">
                   <Link to="/home">Home</Link>
                   <Link to="/mybookings">My Booking</Link>
@@ -33,6 +35,7 @@ const Footer = () => {
             <Col xs={12} md={6} lg={3}>
               <div className="others-page">
                 <h2>Others page</h2>
+                <hr />
                 <div className="links">
                   <Link to="/">Privacy & Policy</Link>
                   <Link to="/">Terms of Use</Link>

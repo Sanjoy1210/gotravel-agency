@@ -16,10 +16,12 @@ const Hotel = ({ hotel }) => {
             <Card.Text>
               <i className="fas fa-map-marker-alt"></i> {location}
             </Card.Text>
-            <Card.Text>
-              $ {price}
-            </Card.Text>
-            <Button variant="warning">See More</Button>{' '}
+            <div className="d-flex justify-content-between">
+              <h3 className="mb-0">
+                <i className="fas fa-dollar-sign"></i> {price}
+              </h3>
+              <Button variant="warning">See More</Button>{' '}
+            </div>
           </Card.Body>
         </Card>
       </div>
