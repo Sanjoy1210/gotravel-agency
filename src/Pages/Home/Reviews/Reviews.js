@@ -10,7 +10,7 @@ const Reviews = () => {
 
   useEffect(() => {
     const loadReviews = async () => {
-      const result = await axios('http://localhost:5000/reviews');
+      const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/reviews');
       setReviews(result.data);
     }
 

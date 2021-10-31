@@ -11,7 +11,7 @@ const ManageAllBookings = () => {
 
   useEffect(() => {
     const loadAllBooking = async () => {
-      const result = await axios('http://localhost:5000/allbooking');
+      const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/allbooking');
       setBookings(result.data);
     }
 
@@ -21,7 +21,7 @@ const ManageAllBookings = () => {
   const handleRemoveBooking = async (id) => {
     const processed = window.confirm('are u sure u want to delete?');
     if (processed) {
-      const result = await axios.delete(`http://localhost:5000/allbooking/${id}`);
+      const result = await axios.delete(`https://mysterious-scrubland-36243.herokuapp.com/allbooking/${id}`);
       if (result.data.deletedCount) {
         alert('deleted successfully');
       }
@@ -33,7 +33,7 @@ const ManageAllBookings = () => {
   const updateBookingStatus = async (id) => {
     const updateBooking = bookings.find(booking => booking._id == id);
     updateBooking.status = 'approved';
-    const result = await axios.put(`http://localhost:5000/booking/${id}`, updateBooking);
+    const result = await axios.put(`https://mysterious-scrubland-36243.herokuapp.com/booking/${id}`, updateBooking);
     if (result.data.modifiedCount) {
       setPending(pending - 1);
       setApproved(approved + 1);

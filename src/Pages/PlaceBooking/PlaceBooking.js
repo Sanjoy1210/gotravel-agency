@@ -15,7 +15,7 @@ const PlaceBooking = () => {
 
   useEffect(() => {
     const loadSinglePlan = async () => {
-      const result = await axios(`http://localhost:5000/plan/${id}`);
+      const result = await axios(`https://mysterious-scrubland-36243.herokuapp.com/plan/${id}`);
       setPlan(result.data);
       console.log(result.data);
     }
@@ -30,7 +30,7 @@ const PlaceBooking = () => {
     data.imageUrl = plan.imageUrl;
     // data.planTitle = { plan.planTitle };
     console.log(data);
-    const result = await axios.post('http://localhost:5000/booking', data);
+    const result = await axios.post('https://mysterious-scrubland-36243.herokuapp.com/booking', data);
     if (result.data.insertedId) {
       alert('Booking successfully');
       reset();

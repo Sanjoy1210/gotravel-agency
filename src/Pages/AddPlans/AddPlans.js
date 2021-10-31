@@ -10,7 +10,7 @@ const AddPlans = () => {
   const onSubmit = data => {
 
     const addPlans = async () => {
-      const result = await axios.post('http://localhost:5000/addplans', data);
+      const result = await axios.post('https://mysterious-scrubland-36243.herokuapp.com/addplans', data);
       if (result.data.insertedId) {
         alert('plan added successfully');
         reset();

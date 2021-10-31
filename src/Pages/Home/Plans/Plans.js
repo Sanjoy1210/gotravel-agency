@@ -11,7 +11,7 @@ const Plans = () => {
 
   useEffect(() => {
     const loadPlans = async () => {
-      const result = await axios('http://localhost:5000/plans');
+      const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/plans');
       setPlans(result.data);
       console.log(result);
     }

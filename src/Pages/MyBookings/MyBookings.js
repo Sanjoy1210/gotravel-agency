@@ -13,7 +13,7 @@ const MyBookings = () => {
 
   useEffect(() => {
     const loadBooking = async () => {
-      const result = await axios('http://localhost:5000/allbooking');
+      const result = await axios('https://mysterious-scrubland-36243.herokuapp.com/allbooking');
       console.log(result.data);
       if (result.data) {
         const userBookings = result.data.filter(book => book.email == user.email);
@@ -29,7 +29,7 @@ const MyBookings = () => {
   const handleRemoveBooking = async (id) => {
     const processed = window.confirm('are u sure u want to delete?');
     if (processed) {
-      const result = await axios.delete(`http://localhost:5000/allbooking/${id}`);
+      const result = await axios.delete(`https://mysterious-scrubland-36243.herokuapp.com/allbooking/${id}`);
       if (result.data.deletedCount) {
         alert('deleted successfully')
       }
