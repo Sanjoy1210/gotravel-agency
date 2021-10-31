@@ -19,6 +19,11 @@
   box-shadow: 0px 3px 10px #21252947;
 }
 
+.description {
+  line-height: 2;
+  text-align: justify;
+}
+
 @media only screen and (max-width: 991px) {
   .photos img {
     margin-bottom: 15px;

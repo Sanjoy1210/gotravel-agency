@@ -44,10 +44,15 @@ const PlaceBooking = () => {
           <Row>
             <Col sm={12} lg={9}>
               <div className="mb-4">
-                <h2>{plan.planTitle}</h2>
+                <h2>{plan?.planTitle}</h2>
               </div>
-              <div>
+              <div className="description">
                 <p>{plan?.description}</p>
+              </div>
+              <div className="others-info">
+                <h3 className="mb-3"><i className="fas fa-dollar-sign"></i> {plan?.price}</h3>
+                <p><i className="far fa-calendar-alt"></i> {plan?.day} days</p>
+                <p><i className="fas fa-user"></i> {plan?.persons} persons</p>
               </div>
             </Col>
             <Col sm={12} lg={3}>
@@ -65,7 +70,7 @@ const PlaceBooking = () => {
                   <input placeholder="Enter your address" {...register("address")} />
                   <input placeholder="Enter your phone number" {...register("phone")} />
                   <input type="date" {...register("date")} />
-                  <input defaultValue={plan.planTitle} {...register("planTitle")} />
+                  <input defaultValue={plan?.planTitle} {...register("planTitle")} />
                   {/* errors will return when field validation fails  */}
                   {errors.exampleRequired && <span>This field is required</span>}
 

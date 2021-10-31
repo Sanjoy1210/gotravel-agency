@@ -22,16 +22,20 @@ const Plan = ({ plan }) => {
             <Card.Text>
               {description.slice(0, 100)}
             </Card.Text>
-            <Card.Text>
-              {day} days
-            </Card.Text>
-            <Card.Text>
-              {persons} persons
-            </Card.Text>
-            <Card.Text>
-              $ {price}
-            </Card.Text>
-            <Button as={Link} to={`/placebooking/${_id}`} variant="warning">Book now</Button>{' '}
+            <div className="d-flex justify-content-between">
+              <Card.Text>
+                <i className="far fa-calendar-alt"></i> {day} days
+              </Card.Text>
+              <Card.Text>
+                <i className="fas fa-user"></i> {persons} persons
+              </Card.Text>
+            </div>
+            <div className="d-flex justify-content-between align-items-center">
+              <h3 className="mb-0">
+                <i className="fas fa-dollar-sign"></i> {price}
+              </h3>
+              <Button as={Link} to={`/placebooking/${_id}`} variant="warning">Book now</Button>{' '}
+            </div>
           </Card.Body>
         </Card>
       </div>

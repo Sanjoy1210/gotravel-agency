@@ -52,7 +52,7 @@ const Footer = () => {
             </Col>
             <Col xs={12} md={6} lg={3}>
               <div className="title">
-                <h3>Newsletter</h3>
+                <h2>Newsletter</h2>
                 <hr />
               </div>
               <div className="newsletter-body">

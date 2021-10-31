@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import Rating from 'react-rating';
 import './Review.css';
 
 const Review = ({ singleReview }) => {
@@ -15,7 +16,7 @@ const Review = ({ singleReview }) => {
           </div>
           <Card.Body>
             <Card.Text>
-              {ratings}
+              <Rating initialRating={ratings} emptySymbol="far fa-star icon-color" fullSymbol="fas fa-star icon-color" readonly></Rating>
             </Card.Text>
             <Card.Text>
               {review}

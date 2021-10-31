@@ -3,15 +3,16 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Headers.css';
+import logo from '../../../images/logo/loader.png';
 
 const Headers = () => {
   const { user, logOut } = useAuth();
   console.log(user);
   return (
     <>
-      <Navbar bg="light" variant="light" collapseOnSelect expand="lg">
+      <Navbar bg="light" variant="light" collapseOnSelect expand="lg" sticky="top">
         <Container>
-          <Navbar.Brand as={Link} to="/home">GoTravel</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home"><img className="logo" src={logo} alt="" /> GoTravel</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto align-items-center">
