@@ -1,0 +1,74 @@
+[
+  {
+    "planTitle": "Corfu",
+    "imageUrl": "https://i.ibb.co/PGLmsLc/holiday-place-6.jpg",
+    "description": "Corfu Greece is one of the most beautiful and romantic islands of the Ionian island group. From lush green hills to noble mansions and from idyllic Corfu beaches, to interesting museums, this island has everything it takes to please any type of traveler. Strongly influenced by the Venetians, the French and the English, Corfu Town is a brilliant base for exploration. Get lost in the narrow cobblestone alleys, the so-called “kandounia”, visit museums, such as the Museum of Asian Art, walk down the famous Liston promenade, stroll around the huge Spianada square… The whole Corfu town squeezes out a nostalgic charm! You’ll see the glorious past of Corfu on imposing palaces, noble mansions, beautiful museums, and charming squares. Moving away from Corfu Town, you’ll discover picturesque seaside villages, tiny verdant islets, luxurious Corfu resorts, and wild natural landscapes. It’s amazing how the different sides of this idyllic island coexist in harmony!",
+    "day": "3",
+    "persons": "8",
+    "ratings": 4.0,
+    "price": 600
+  },
+  {
+    "planTitle": "Varadero",
+    "imageUrl": "https://i.ibb.co/Gk2PPXr/holiday-place-7.jpg",
+    "description": "Varadero is a favorite spot in Cuba - and in the entire Caribbean - for the beautiful, spotless beaches and incredible scenery. Just two hours away from Havana, this small town has all the restaurants, bars, stores, resorts, and apartment rentals you could need to make for a perfect beach vacation. Varadero is popular with Cubans and foreigners alike - José has so many memories of spending summer days here as a kid, and now we have our own memories here as well. While the resorts in Varadero have their own private stretches of beach, there is more than enough public beach that it won’t be a challenge to find the perfect spot to enjoy. You’ll enjoy just as great a beach vacation renting an apartment a few blocks from the beach as you will at a resort.",
+    "day": "4",
+    "persons": "10",
+    "ratings": 4.2,
+    "price": 900
+  },
+  {
+    "planTitle": "Seville",
+    "imageUrl": "https://i.ibb.co/zs3Y2HW/holiday-place-8.jpg",
+    "description": "The city of Seville (or Sevilla in spanish) is the capital of the Spanish region. In the cultural, political, economic and artistic realms, Seville is the most important southern Spanish city. Seville has the largest historic centre of Europe. The historic city centre of Seville offers many attractions, such as the Real Alcázar de Sevilla, the Seville Cathedral with the Giralda Tower and the Torre del Oro at the river. This beautiful city is located on the Guadalquivir river. Thanks to the many historical highlights, Seville is seen by many people as the most beautiful city of Andalusia and Spain. Conclusion, considering all the Arabic influences, the narrow winding streets, parks and the large historic centre (Barrio de Santa Cruz). Barrio de Triana, a district of Seville is seen as the birthplace of flamenco, the typical Spanish dance and music. Seville is famous for its Mudéjar architecture, which is a mix of Islamic and Catholic architectural styles.",
+    "day": "3",
+    "persons": "8",
+    "ratings": 4.4,
+    "price": 800
+  },
+  {
+    "planTitle": "Rome",
+    "imageUrl": "https://i.ibb.co/gtcgQ2v/holiday-place-1.jpg",
+    "description": "A trip to Rome is not complete without a visit to the Vatican City. Measuring just under 44 hectares, the Vatican is the smallest country in the world. The religious centre of the Roman-Catholic Church is a separate state that doesn’t require a passport to enter. The residence of the Pope draws millions of pilgrims and visitors a year and only counts 800 official residents. The Vatican museum is one of the most beautiful museums in the world: it displays countless masterpieces of paintings and sculptures. Over the course of time, several popes have also amassed an impressive art collection; the popes were among the first art lovers who opened up their collections to the public. The Vatican museum first opened in 1503 with Pope Julius II’s collection of sculptures. These sculptures are still on display and can be admired in the Cortile Ottagono.",
+    "day": "4",
+    "persons": "6",
+    "ratings": 3.4,
+    "price": 700
+  },
+  {
+    "planTitle": "Milan",
+    "imageUrl": "https://i.ibb.co/YDqWtjN/holiday-place-2.jpg",
+    "description": "Explore Milan’s top attractions on a walking tour. Led by a guide, visit the Duomo di Milano, Italy’s largest church, and enjoy your choice between skip-the-line entry to ‘The Last Supper’ or a tour of Leonardo da Vinci's Vineyard. Discover the city’s famous plazas, stroll through the fashion district, and check out popular spots with the locals. Numbers are limited to keep the experience as intimate as possible. Milan, the capital of Lombardy, has a population of 1.3 million people. It is the biggest industrial city of Italy with many different industrial sectors. It is a magnetic point for designers, artists, photographers and models. Milan has an ancient city centre with high and interesting buildings and palazzos, which is why so many people from all over the world want to see the city of glamour.",
+    "day": "5",
+    "persons": "12",
+    "ratings": 3.0,
+    "price": 400
+  },
+  {
+    "planTitle": "Island",
+    "imageUrl": "https://i.ibb.co/f1bJws7/holiday-place-3.jpg",
+    "description": "An island may be described as such, despite the presence of an artificial land bridge; examples are Singapore and its causeway, and the various Dutch delta islands, such as IJsselmonde. Some places may even retain island in their names for historical reasons after being connected to a larger landmass by a land bridge or landfill, such as Coney Island and Coronado Island, though these are, strictly speaking, tied islands. Conversely, when a piece of land is separated from the mainland by a man-made canal, for example the Peloponnese by the Corinth Canal, more or less the entirety of Fennoscandia by the White Sea Canal, or Marble Hill in northern Manhattan during the time between the building of the United States Ship Canal and the filling-in of the Harlem River which surrounded the area, it is generally not considered an island.",
+    "day": "6",
+    "persons": "10",
+    "ratings": 3.9,
+    "price": 900
+  },
+  {
+    "planTitle": "Winter",
+    "imageUrl": "https://i.ibb.co/N6c9D1L/holiday-place-4.jpg",
+    "description": "Winter, the coldest season of the year, comes between autumn and spring. It is associated with plunging temperatures and icy weather, but its impact and timing change according to location. The farther an area lies from the equator, the colder temperatures it experiences. Temperatures in equatorial regions stay relatively constant despite the shifting seasons. This is because, due to the curve of the Earth, the equatorial areas get more sunlight, according to the by the Corinth Canal, more or less the entirety of Fennoscandia by the White Sea Canal, or Marble Hill in northern Manhattan during the time between the building of the United States Ship Canal and the filling-in of the Harlem River which surrounded the area, it is generally not considered an island.",
+    "day": "4",
+    "persons": "9",
+    "ratings": 4.0,
+    "price": 600
+  },
+  {
+    "planTitle": "Vatican",
+    "imageUrl": "https://i.ibb.co/N1qGDRg/holiday-place-5.jpg",
+    "description": "Back in the day, modern day Italy was divided, with the Papal States, which was run by the popes, covering a large portion of Italy including Rome. The Kingdom of Italy, wanting Rome for their capital city, conquered the Papal States, resulting in the Pope to hide within the Vatican walls. The pope both refused to acknowledge the Kingdom of Italy as a country as well as grumbling on how he was confined within the Vatican Walls by the Kingdom of Italy. The country decided to wait until the Pope cracked, and accepted Italy as a country, and finally stepping out of the Vatican walls. However, this lasted sixty years, with multiple Popes accepting this self-imposed captivity. Finally, the Prime Minister of Italy proposed an agreement in 1929. The Vatican City was to become its own country, led by the Pope, with the bonus of money given by Italy. The pope agreed that Italy was its own country, and that Vatican City would be neutral to any country disagreements or war.",
+    "day": "5",
+    "persons": "10",
+    "ratings": 5.0,
+    "price": 500
+  }
+]

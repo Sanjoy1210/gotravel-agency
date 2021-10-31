@@ -3,6 +3,14 @@
   padding: 10px 10px 0;
 }
 
+.plan {
+  margin-bottom: 20px;
+}
+
+.plan p {
+  text-align: justify;
+}
+
 .plan-thumbnail {
   position: relative;
   display: block;
@@ -17,6 +25,10 @@
 .card:hover .card-img-top {
   opacity: 1;
   transform: scale(1.05);
+}
+
+.icon-color {
+  color: gold;
 }
 
 @media only screen and (max-width: 991px) {

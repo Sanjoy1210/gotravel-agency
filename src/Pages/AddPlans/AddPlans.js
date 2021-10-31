@@ -17,15 +17,6 @@ const AddPlans = () => {
       }
     }
 
-    //     https://i.ibb.co/PGLmsLc/holiday-place-6.jpg
-    // https://i.ibb.co/Gk2PPXr/holiday-place-7.jpg
-    // https://i.ibb.co/zs3Y2HW/holiday-place-8.jpg
-    // https://i.ibb.co/gtcgQ2v/holiday-place-1.jpg
-    // https://i.ibb.co/YDqWtjN/holiday-place-2.jpg
-    // https://i.ibb.co/f1bJws7/holiday-place-3.jpg
-    // https://i.ibb.co/N6c9D1L/holiday-place-4.jpg
-    // https://i.ibb.co/N1qGDRg/holiday-place-5.jpg
-
     addPlans().catch(console.dir);
   }
 
