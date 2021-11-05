@@ -5,6 +5,7 @@ import AddPlans from './Pages/AddPlans/AddPlans';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Register from './Pages/Login/Register/Register';
 import ManageAllBookings from './Pages/ManageAllBookings/ManageAllBookings';
 import MyBookings from './Pages/MyBookings/MyBookings';
 import NotFound from './Pages/NotFound/NotFound';
@@ -40,6 +41,9 @@ function App() {
             <PrivateRoute path="/placebooking/:id">
               <PlaceBooking />
             </PrivateRoute>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="*">
               <NotFound />
             </Route>

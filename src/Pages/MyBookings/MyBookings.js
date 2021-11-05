@@ -6,6 +6,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import Booking from '../Booking/Booking';
 import './MyBookings.css';
+import userIcon from '../../images/user/user.png';
 
 const MyBookings = () => {
   const { user } = useAuth();
@@ -43,7 +44,7 @@ const MyBookings = () => {
             <Row>
               <Col sm={12} md={3}>
                 <div className="user-image">
-                  <img src={user.photoURL} alt={user.displayName} />
+                  <img src={user.photoURL ? user.photoURL : userIcon} alt={user.displayName} />
                 </div>
               </Col>
               <Col sm={12} md={9}>

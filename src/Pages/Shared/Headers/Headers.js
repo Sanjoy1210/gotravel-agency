@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Headers.css';
 import logo from '../../../images/logo/loader.png';
+import userIcon from '../../../images/user/user.png';
 
 const Headers = () => {
   const { user, logOut } = useAuth();
@@ -26,7 +27,7 @@ const Headers = () => {
                     <Nav.Link as={Link} to="/manageallbookings">Manage All Bookings</Nav.Link>
                     <Nav.Link as={Link} to="/addplans">Add A New Plan</Nav.Link>
                     <span>{user.displayName}</span>
-                    <span className="profile-pic"><img src={user.photoURL} alt="" style={{ width: "50px", height: "50px" }} /></span>
+                    <span className="profile-pic"><img src={user?.photoURL ? user?.photoURL : userIcon} alt="" style={{ width: "50px", height: "50px" }} /></span>
                     <Button onClick={logOut} variant="warning">Log out</Button>
                   </>
               }
